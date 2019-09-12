@@ -1,0 +1,3 @@
+Para las imagenes checarlos
+
+<img src="{{ $product->images()->first()->image }} ">  el ultimo es la ruta de la imagen url

@@ -1,0 +1,1 @@
+<td>{{ $producto->category ? $product->category->name : 'General' }}</td>
