@@ -6,3 +6,27 @@ Generando los faker.
 'precio' => $faker->randomFloat(2,5,150);  // a a 5 decimales maximo de 150
 'category_id' => $faker->numberBetween(1,100);  //numero sdel uno al 100
 'image' => $faker->imageUrl(250,250); //tamaño
+
+
+//relaciones
+$users = factory(App\User::class, 3)
+           ->create()
+           ->each(function ($user) {
+                $user->posts()->save(factory(App\Post::class)->make());
+            });
+
+//poca madre
+
+$cat=factory(Category::class, 5)->create(); //creamos 5 categorias
+$cat->each(function($c){ //for
+    $productos=factory(Products::class, 20)->make(); //crea 20 productos para cada categoria
+    $c->products()->saveMany($productos);  //se utiliza la relaciones
+
+    $productos->each(function($p){
+        $images=factory(Images::class, 5)->make(); //para cada producto se crean 5 imagenes
+        $p->images()->saveMany($images);
+    });
+});
+
+imagen-> Relaciones_factory
+
