@@ -1,0 +1,7 @@
+Carpeta validacion
+
+uno-> simple
+
+//mostrar en el formulario
+
+mensaje uno

@@ -1,2 +1,5 @@
 imagens->insertar
 
+imagenes->update
+
+imagenes->delete  -> form_delete
