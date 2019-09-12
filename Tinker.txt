@@ -1,0 +1,18 @@
+php artisan tinker  //inica tinker
+
+//consulta a la base 
+$productos= App\Products::all();
+ //quitar el App
+ use App\Products;
+
+ Product::count();  //cuantos productos tenemos
+
+ exit  //salir
+
+ //ejemplo de un uso real
+
+ use App\Category;
+
+ $c=Category::first(); //el primer elemento de las categorias
+
+ $c->productos;  //nos da los productos.

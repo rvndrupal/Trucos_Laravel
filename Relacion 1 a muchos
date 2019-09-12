@@ -1,0 +1,14 @@
+
+
+    public function products()
+    {
+        return $this->hasMany(Product::class); //muchos productos
+    }
+
+    Inversa
+
+    public function category(){
+        return $this->belongsTo(Category::class);  //un producto pertenece a una categoria.
+    }
+
+    
