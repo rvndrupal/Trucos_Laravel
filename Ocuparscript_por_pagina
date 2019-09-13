@@ -1,0 +1,10 @@
+En la pagina general app.
+
+se pone  @yield('scripts')
+
+
+2.-En donde se va a utilizar se pone.
+
+@section('scripts')
+ aqui se pone el script.
+@endsection
