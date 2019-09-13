@@ -1,0 +1,4 @@
+php artisan make:mail Nuevo
+
+
+Verificar el video para hacer los calculos al email  curso  Aprender Laravel 5 y desarrolla una app de pedidos en linea
