@@ -5,3 +5,6 @@ uno-> simple
 //mostrar en el formulario
 
 mensaje uno
+
+
+{{ $products->featured_image_url }}
