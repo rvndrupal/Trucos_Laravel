@@ -1,0 +1,4 @@
+1.- php artisan make:middleware Language
+
+2.-alta de los archivos en.json  en -> la carpeta lang
+

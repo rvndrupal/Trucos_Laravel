@@ -84,6 +84,7 @@ class User extends Authenticatable
     public static function navigation () {
     	return auth()->check() ? auth()->user()->role->name : 'guest';
     }
+    //para el menu de navegacion sino es guest invitado
 
     public function role () {
     	return $this->belongsTo(Role::class);

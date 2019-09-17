@@ -1,0 +1,6 @@
+1.- instalar yarn
+
+
+2.- comando  yarn
+
+3.-nom run watch

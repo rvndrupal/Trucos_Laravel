@@ -1,0 +1,5 @@
+1.-crear archivo en config->languajes.php
+
+2.-crear sección en controller
+
+Route::get('/set_language/{lang}', 'Controller@setLanguage')->name( 'set_language');

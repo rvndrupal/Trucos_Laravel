@@ -1,0 +1,12 @@
+Funcion navigate.
+
+public static function navigation () {
+    	return auth()->check() ? auth()->user()->role->name : 'guest';
+    }
+    //para el menu de navegacion sino es guest invitado
+
+luego se agrega el include
+
+En partialas esta navigation.blade.php esta linea es la magia
+
+      @include('partials.navigations.' . \App\User::navigation())   //te regresa con la funcion el rol que tiene
