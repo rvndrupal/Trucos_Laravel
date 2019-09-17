@@ -1,0 +1,3 @@
+Ojo con el request only
+
+$category->update($request->only('name','description'));
