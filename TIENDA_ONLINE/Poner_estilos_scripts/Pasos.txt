@@ -1,0 +1,7 @@
+Para Poner los estilos en la hoja app.blade.php se Poner
+
+@stack('styles')  donde quieres que se monten los estilos  como un ancla y para colocarlos es con
+
+@push('styles')
+    la hoja va aqui pero se ponen en el ancla con stack
+@endpush
