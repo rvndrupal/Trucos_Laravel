@@ -1,0 +1,51 @@
+Relación tiene uno.
+
+public function profile()
+{
+    return $this->hasOne(Profile::class);  //tiene uno
+}
+
+$table->bigInteger('user_id')->unsigned();
+$table->foreign('user_id')->references('id')->on('users')
+->onDelete('cascade');
+->onUpdate('cascade');
+
+$table->bigInteger('user_id')->unsigned();
+$table->foreign('user_id')->references('id')->on('users')
+->onDelete('set null'); //se ponen en nulo
+->onUpdate('cascade');
+
+###############################################################
+
+Relación uno a muchos.
+
+public function users()
+{
+    return $this->hasMany(User::class);  //un usuario tiene muchos niveles
+}
+
+//inversa
+
+public function level()
+{
+    return $this->belongsTo(Level::class);
+}
+
+##################################################################
+
+Relación muchos a muchos
+
+php artisan make:migration create_group_user_table 
+
+$table->bigInteger('group_id')->unsigned();
+$table->foreign('group_id')->references('id')->on('groups')
+->onDelete('cascade');
+->onUpdate('cascade');
+
+$table->bigInteger('user_id')->unsigned();
+$table->foreign('user_id')->references('id')->on('users')
+->onDelete('cascade');
+->onUpdate('cascade');
+
+
+#######################################################################
