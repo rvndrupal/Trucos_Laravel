@@ -47,5 +47,55 @@ $table->foreign('user_id')->references('id')->on('users')
 ->onDelete('cascade');
 ->onUpdate('cascade');
 
+public function groups()
+{
+    return $this->belongsToMany(Group::class);
+}
 
+
+public function users()
+{
+    return $this->belongsToMany(User::class)->withTimestamps();  //para que guarde las fechas.
+}
 #######################################################################
+
+
+Esta esta poca madre uno a travez de:
+
+Estando en modelo User
+
+public function localitation()
+{
+    return $this->hasOneThrough(Localitation::class, Profile::class);  //tengo una localización a travez de Perfil
+}
+
+para perfil:
+
+public function location()
+{
+    return $this->hasOne(Localitation::class);
+}
+
+
+########################################################################
+
+RELACIÓN POLIMORFICA.
+
+tabla coments.
+
+$table->morphs('commentable');   //todo debe terminae en -> able
+
+$table->morphs('imageable');  // se puede grabar una imagen para videos, post, etc.
+
+
+
+
+
+
+########################################################################
+
+
+Comienzan las consultas.
+
+$users=App\User::get();  //todos los usuarios.
+

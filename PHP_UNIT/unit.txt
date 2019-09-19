@@ -1,0 +1,15 @@
+Desarrollo guiado por pruebas.
+
+Instalarlo  composer require --dev phpunit/phpunit ^8.0
+
+Página en Español.  
+https://phpunit.readthedocs.io/es/latest/
+
+Para ejecutar
+
+vendor/bin/phpunit Slugtext.php
+
+
+Video 6
+
+Ver curso de laravel y vue.
