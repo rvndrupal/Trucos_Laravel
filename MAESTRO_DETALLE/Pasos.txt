@@ -1,0 +1,9 @@
+1.-se Crean las tablas.
+
+Tabla ingresos y detalle de ingresos.
+
+Ojo con la relación a los proveedores.
+
+2.-Detalle ingresos.
+
+Ojo con la relación contra los articulos.

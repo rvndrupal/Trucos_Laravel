@@ -1,0 +1,7 @@
+public function getRouteKeyName(){
+    return 'title'   //se le pasa el campo por el que se quiere buscar.
+}
+
+//Esto es el modelo que se quiere modificar 
+
+//crear campo slug.

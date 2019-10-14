@@ -1,0 +1,75 @@
+###mostrando los errores.
+
+@if($errors->any())
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+
+//para cuando queremos abajo del campo
+
+<input type="name" placeholder="nombre">
+{!! $errors->first('name','<small>:message</small><br>') !!}
+
+
+//creando form request.
+
+php artisan make:request CreateClientesRequest  //se guarda en app->http->request
+
+
+public function rules(){
+
+    return[
+        'title' => 'required',
+        'ap' => 'required|',
+        'am' => 'required',
+    ];
+}
+
+//uno chingon
+
+public function rules()
+    {
+        switch ($this->method()) {
+	        case 'GET':
+	        case 'DELETE':
+		        return [];
+	        case 'POST': {
+	        	return [
+	        	    'name' => 'required|min:5',
+			        'description' => 'required|min:30',
+			        'level_id' => [
+			        	'required',
+				        Rule::exists('levels', 'id')
+			        ],
+		            'category_id' => [
+			            'required',
+			            Rule::exists('categories', 'id')
+		            ],
+			        'picture' => 'required|image|mimes:jpg,jpeg,png',
+			        'requirements.0' => 'required_with:requirements.1',
+			        'goals.0' => 'required_with:goals.1',
+		        ];
+	        }
+	        case 'PUT': {
+		        return [
+			        'name' => 'required|min:5',
+			        'description' => 'required|min:30',
+			        'level_id' => [
+				        'required',
+				        Rule::exists('levels', 'id')
+			        ],
+			        'category_id' => [
+				        'required',
+				        Rule::exists('categories', 'id')
+			        ],
+			        'picture' => 'sometimes|image|mimes:jpg,jpeg,png',
+			        'requirements.0' => 'required_with:requirements.1',
+			        'goals.0' => 'required_with:goals.1',
+		        ];
+	        }
+        }
+    }
+
