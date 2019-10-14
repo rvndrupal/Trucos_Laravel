@@ -1,0 +1,7 @@
+npm install   -> instala todos los paquetes.
+
+npm run watch
+
+##truco para forzar actualización.
+
+ctrl->shif->r
