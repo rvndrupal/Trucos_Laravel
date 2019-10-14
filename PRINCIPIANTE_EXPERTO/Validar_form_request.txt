@@ -28,6 +28,17 @@ public function rules(){
     ];
 }
 
+public function messages(){
+    return[
+        'title.required' => 'El Proyecto necesita un título',
+        'title.max' => 'Maximo etc',
+    ];
+}
+
+
+
+
+
 //uno chingon
 
 public function rules()
@@ -72,4 +83,19 @@ public function rules()
 	        }
         }
     }
+
+
+
+    //como se utiliza.
+//ojo se tiene que importar en las librerias.
+use App\Http\Request\CreateClientesRequest;
+
+public function store(CreateClientesRequest $request){
+
+    //si no tiene asignación masiva.
+
+    Clientes::create($request->validated());
+
+}
+
 

@@ -1,0 +1,6 @@
+//Para activar los links con laravel.
+
+<li class="{{ request()->routeIs('home') ? 'active : '' }}">Home</li>
+
+//utilizando el helper
+<li class="{{ setActive('home') }}">Home</li>
