@@ -1,0 +1,4 @@
+public function roles(){
+    return $this->belongsToMany(Role::class, 'assigen_roles');
+    //el segundo parametro sirve para decirle como se llama la tabla pivote
+}

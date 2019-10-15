@@ -1,0 +1,25 @@
+php artisan tinker
+
+####crear un usuario
+$u= new App\User;\
+$u->name= "Administrador";\
+$u->email="admin@gmail.com";\
+$u->passwors="bcrypt("123123");\
+$u->save();
+
+
+Para limpiar la pantalla ctrl+ r
+
+##### Consultas.
+
+Ver todos los usuarios.
+
+App\User::all();
+
+App\User::find(1);
+
+Salir
+
+ctrol+c
+
+
