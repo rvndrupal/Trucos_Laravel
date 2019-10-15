@@ -16,3 +16,17 @@ $productos= App\Products::all();
  $c=Category::first(); //el primer elemento de las categorias
 
  $c->productos;  //nos da los productos.
+
+
+ $clientes=App\Clientes::create([
+     'nombre' => 'antonio',
+     'ap' => 'Fernandez'
+ ]);
+
+ $cliente=new App\Clientes;
+
+ $cliente->nombre="Juan"
+ $clientes->ap="perez"
+
+ $cliente->save();
+
