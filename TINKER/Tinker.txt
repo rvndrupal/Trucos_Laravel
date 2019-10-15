@@ -30,3 +30,8 @@ $productos= App\Products::all();
 
  $cliente->save();
 
+
+ ####ver las relaciones.
+
+ $pro=App\Product::with('tags')->get();
+
