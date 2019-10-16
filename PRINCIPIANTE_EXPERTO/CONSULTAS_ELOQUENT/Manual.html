@@ -1,0 +1,12 @@
+Carga previa evitar sobre carga de consultas. 
+
+$mmesage=Message::with('user')->get();
+
+Cuando son varias se pone en un Arreglo.
+
+$mmesage=Message::with(['user','note','tags'])->get();
+
+
+Para mostralas solo se pone la relacion.
+
+{{ $user->tags->pluck('name')->implode(', ') }}  ejemplo si son varios campos de tags
