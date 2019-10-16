@@ -1,0 +1,35 @@
+Eventos. 
+
+<img src="Definicion.PNG">
+
+Comando para crear el evento y el listener
+
+php artisan event:generate   ->checar con php artisan
+
+Cuando se crea un evento se tiene que configurar el listener 
+
+<img src="Listener_message.PNG">
+
+NOTA NO OLVIDAR IMPORTAR EL EVENTO
+
+use Illuminate\Http\MessageWasReceived;
+
+Cuando se ponen los dos y ejecutas el comando  php artisan event:generate
+
+se genera tanto el evento y el listener que corresponden.
+
+Como se solicita.
+
+<img src="Solicitar_evento.PNG">
+
+Ojo se les pasa la variable $message 
+
+<img src="Prppiedad_publica.PNG">
+
+poner la propiedad en publica -> protected $message a  public $message
+
+Video 70
+
+
+
+
