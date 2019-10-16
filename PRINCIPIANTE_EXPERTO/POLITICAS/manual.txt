@@ -1,0 +1,65 @@
+Comando
+
+php artisan make:policy UserPolicy
+
+Para asignar -> Provides AuthServiceprovider
+
+Alta
+
+protected $policies =[
+    User::class => UserPolicy::class,
+]
+
+
+//creando las politicas.
+
+public function edit(User $authUser, User $user)
+{
+    return $authUser->id=== $user->id;  //que sea el usuario autentificado.
+}
+
+Usandolo.
+dentor del edit del controlador.
+
+$this->authorize($user);  //por que le pasa uno por el autentificado es por default.
+
+
+//Hacemos una igual para update.
+
+public function update(User $authUser, User $user)
+{
+    return $authUser->id=== $user->id;  //que sea el usuario autentificado.
+}
+
+se aplica igual dentro del controler metodo update.
+
+$this->authorize($user);  
+
+//para editar a cualquier usuario distinto.
+
+Crear un metodo llamado before este metodo se ejecuta antes que todos se devuelve verdadero no pasan los otros metodos.
+
+
+public function before($user, $ability){
+
+    if($user->hasRoles(['admin'])){
+        return true;  //si es un admin todos las demas politicas ya no se ejecutaran chingon ok
+    }
+    
+}
+
+
+//en blade se pueden utilizar de la siguiente manera
+
+@can('edit', $user)
+
+<a href="{{ route('usuarios.edit', $user->id) }}">Editar</a>
+
+@endcan
+
+
+
+
+
+
+
