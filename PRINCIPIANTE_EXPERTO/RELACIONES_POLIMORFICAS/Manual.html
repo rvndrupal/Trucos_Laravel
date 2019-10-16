@@ -1,0 +1,59 @@
+Para crear las relaciones se hacen desde las migraciones.
+
+<img src="Alta_migracion.PNG">
+
+Ojo con los campos uno es para el id y el otro para el tipo.
+
+
+El modelo note queda. 
+<img src="Modelo_nota.PNG">
+
+El modelo mensagge. 
+<img src="MorpMany.PNG"> o 
+<img src="MorpOne.PNG">
+
+Esto se hace en cada modelo se pega  cualquiera de los de Arriba. 
+
+<img src="ModeloUser.PNG">
+
+Demo desde Tinker.
+
+<img src="Subir_tinker.PNG">
+
+Para mostrarlo es tan simple como llamar a la relación. 
+
+<img src="Mostrar_relacion_poli.PNG">
+
+{{ $user->note->body }}
+
+
+######################################
+Para las de muchos a muchos. 
+
+Migración con la referencia al id de tag y lo de las relaciones polimorficas. 
+
+<img src="Poli_muchos_tag.PNG">
+
+En el modelo tag se el metodo morphedByMany
+
+<img src="Modelo_tag.PNG">
+
+Modelo  messages. 
+
+<img src="Modelo_mesagge.PNG">
+
+Para mostrar los resultados.
+
+<img src="Mostrar_resulatdos.PNG">
+
+Agregar la hora a la relación. 
+
+<img src="Agregar_hora.PNG">
+
+
+
+
+
+
+
+
