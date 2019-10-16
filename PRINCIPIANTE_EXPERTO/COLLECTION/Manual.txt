@@ -1,0 +1,5 @@
+Salida de datos por medio de la coleccion.
+
+{{ $user->roles->pluck('name')->implode(' - ') }}
+
+Trai el nombre de la relación y con el implode lo separa por espacio - espacio.
