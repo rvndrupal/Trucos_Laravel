@@ -1,0 +1,44 @@
+Manejo de Emails. 
+
+Configurar el nombre he email base
+
+mail.php 
+
+<img src="Configurar.PNG">
+
+Configurar mailtrap
+
+<img src="Mailtrap.PNG">
+
+Para enviar:
+
+impormar la clase.
+
+use Mail;
+
+Recibe tres parametros la vista , el arreglo de datos y el mensaje. 
+
+<img src="Mail.PNG">
+
+
+Se envia el email cargando los datos del mensaje se toman los valores de los campos 
+
+$m->to($mmesage->email, $message->name)->subject('Tu mensaje fue recibido');
+
+<img src="Enviar_email.PNG">
+
+Mostrar mensaje vista blade.
+
+<img src="Email_blade.PNG">
+
+#### ENTORNO DE PRODUCCIÓN. 
+
+cuenta en SPARKPOST
+
+Se configura las cuentas.
+
+<img src="Spartkpost.PNG">
+
+###################MUY IMPORTANTE OBTENER VALOR DE LA CONFIGURACION
+
+
