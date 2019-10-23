@@ -21,6 +21,7 @@ class DoctorController extends Controller
         return view('doctors.index', compact('doctors'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
